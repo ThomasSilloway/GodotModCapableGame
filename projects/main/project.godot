@@ -1,0 +1,21 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="ModdableTemplate-Main"
+run/main_scene="uid://cuspoqasdx4fo"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+FileManager="*res://scripts/file_manager.gd"
+ModManager="*res://scripts/mod_manager.gd"
