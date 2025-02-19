@@ -15,8 +15,8 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 ## Tech Details
 
 - Each mod is a separate godot project
-- `main` is the mod loader project that does nothing except load mods. It'll probably handle global things too like Settings or Config
-- `mainmenu` is the first mod that will display the main menu for the project.  First commit just has a hello world print
+- `main` is the mod loader project that does nothing except load mods. Handles global things too like Settings, Config
+- `mainmenu` is the first mod that displays the main menu for the project.
 
 ## Usage - Manual
 
@@ -33,8 +33,7 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 
 ## Future Updates
 
-- Add an actual main menu and settings from an example project to see what issues might arise
-- Add a mod that adds a button to the main menu via injection
+- Add a mod that adds a button to the main menu via injection, this could be the settings mod?
 - Add a separate mod for a main game sample project that is loaded by the main menu
 - Add a mod that updates the functionality of the sample project via both overwriting and injection
 
