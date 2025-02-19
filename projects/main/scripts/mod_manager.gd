@@ -17,6 +17,14 @@ func _init() -> void:
 	for path in mods_paths:
 		load_mod_from_pck_or_zip(path)
 
+func _ready() -> void:
+	# Now that all mods have been loaded, let's launch the main menu
+	call_deferred("load_main_menu")
+
+func load_main_menu() -> void:
+	var main_menu_scene : String = ConfigManager.config.main_menu_scene
+	get_tree().change_scene_to_file(main_menu_scene)
+
 func load_mod_from_pck_or_zip(path : String) -> void:
 	var result : bool = ProjectSettings.load_resource_pack(path, replace_files_on_mod_load)
 	print("mod manager: %s loaded: %s" % [path, result])
