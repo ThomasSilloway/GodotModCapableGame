@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://csc25w2civ5ud"]
+
+[ext_resource type="FontFile" uid="uid://dqgmiv0q5ah1y" path="res://main_menu/fonts/futura medium bt.ttf" id="1_bh64r"]
+
+[resource]
+default_font = ExtResource("1_bh64r")

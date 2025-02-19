@@ -17,3 +17,4 @@ mono_crash.*.json
 build/ModdableTemplate-Main.pck
 *.zip
 *.pck
+projects/main_menu/main_menu/fonts/
