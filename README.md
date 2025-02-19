@@ -7,6 +7,11 @@ Inspired by: https://www.youtube.com/watch?v=tTdToEu6x8U and https://www.youtube
 
 Build the game as a bunch of mods to make sure mod support works the entire way through
 
+## Versions
+
+[Basic Skeleton](https://github.com/ThomasSilloway/GodotModCapableGame/tree/release/2024.02.19-Basic-Skeleton-Framework)
+ - Basic version that loads a single mod and prints a hello world message. Can be used as a solid baseline for custom implementation
+
 ## Tech Details
 
 - Each mod is a separate godot project
@@ -16,7 +21,9 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 ## Usage - Manual
 
 - Export `main` project as an .exe (Turning on Export Console Wrapper is handy for testing)
-- Export `mainmenu` project as a .zip 
+  - Export folder: build
+- Export `main_menu` project as a .zip and put it into the 
+  - Export folder: build/mods
 
 - Run the `main` executable and view the logs to see the main menu is loaded (first commit)
 
