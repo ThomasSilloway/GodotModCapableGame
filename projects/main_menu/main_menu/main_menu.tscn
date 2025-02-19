@@ -60,14 +60,9 @@ theme = ExtResource("3_glbon")
 layout_mode = 2
 text = "Play"
 
-[node name="Button_Settings" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Settings"
-
 [node name="Button_Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/Button_Play" to="." method="_play"]
-[connection signal="pressed" from="VBoxContainer/Button_Settings" to="." method="_settings"]
 [connection signal="pressed" from="VBoxContainer/Button_Exit" to="." method="_quit"]
