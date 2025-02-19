@@ -16,3 +16,4 @@ mono_crash.*.json
 *.exe
 build/ModdableTemplate-Main.pck
 *.zip
+*.pck
