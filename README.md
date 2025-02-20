@@ -17,12 +17,14 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 - Each mod is a separate godot project
 - `main` is the mod loader project that does nothing except load mods. Handles global things too like Settings, Config
 - `mainmenu` is the first mod that displays the main menu for the project.
+- `settings_menu` is the mod that injects a settings button into the main menu which opens a settings menu
+ - The settings menu updates the values in the `SettingsManager` in the `main` project automatically by having its own placeholder `SettingsManager` autoloaded which is not exported with the project. Surprisingly having a file in the auto load that is not included in the exported project doesn't break anything.
 
 ## Usage - Manual
 
 - Export `main` project as an .exe (Turning on Export Console Wrapper is handy for testing)
   - Export folder: build
-- Export `main_menu` project as a .zip and put it into the 
+- Export `main_menu`, `settings_menu` projects as a .zip and put it into the 
   - Export folder: build/mods
 
 - Run the `main` executable and view the logs to see the main menu is loaded (first commit)
@@ -33,7 +35,6 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 
 ## Future Updates
 
-- Add a mod that adds a button to the main menu via injection, this could be the settings mod?
 - Add a separate mod for a main game sample project that is loaded by the main menu
 - Add a mod that updates the functionality of the sample project via both overwriting and injection
 
