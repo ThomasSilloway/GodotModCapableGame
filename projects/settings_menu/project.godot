@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="ModdableTemplate-SettingsMenu"
-run/main_scene="uid://caqvmestkmnl4"
+run/main_scene="uid://b3m6npy5yx7y4"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
