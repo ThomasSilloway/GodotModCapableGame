@@ -1,6 +1,6 @@
 extends Node
 
-@onready var settings_scene : Node = load("res://settings_menu/settings_button.tscn").instantiate()
+@onready var settings_button_scene : Node = load("res://settings_menu/settings_button.tscn").instantiate()
 
 func _init() -> void:
 	print("settings menu mod init")
@@ -23,8 +23,8 @@ func _on_child_entered_tree(node: Node) -> void:
 
 func inject_settings_button_into_main_menu_list() -> void:
 	var main_menu = get_tree().root.get_node("MainMenu/VBoxContainer")
-	main_menu.add_child(settings_scene)
-	main_menu.move_child(settings_scene, 1)
+	main_menu.add_child(settings_button_scene)
+	main_menu.move_child(settings_button_scene, 1)
 
 	# recursive_print_nodes(get_tree().root)
 
