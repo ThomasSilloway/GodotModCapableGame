@@ -5,7 +5,7 @@ var settings_dictionary : Dictionary
 
 const SETTINGS_FILE_PATH = "user://settings.sav"
 const DEFAULT_SETTINGS = {
-	"resolution": [1280, 720], 
+	"resolution": [1920, 1080], 
 	"vsync": true, 
 	"fullscreen": false,
 	"volume_master": 0.8,
@@ -78,7 +78,11 @@ func load_settings_from_file():
 ## Saves settings in settings file
 func save_settings_to_file():
 	var file = FileAccess.open(SETTINGS_FILE_PATH, FileAccess.WRITE)
-	file.store_string(JSON.stringify(settings_dictionary))
+	var json_string = JSON.stringify(settings_dictionary)
+	file.store_string(json_string)
 
 func get_resolution_as_str():
-	return str(settings_dictionary.resolution[0]) + "x" + str(settings_dictionary.resolution[1])
+	
+	var resolution_str = str(int(settings_dictionary.resolution[0])) + "x" + str(int(settings_dictionary.resolution[1]))
+	
+	return resolution_str
