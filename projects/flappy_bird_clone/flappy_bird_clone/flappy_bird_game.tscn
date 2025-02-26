@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3lgyil2g6x0l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alaj6"]
+size = Vector2(1169, 44)
+
+[node name="FlappyBirdGame" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(576.5, 644)
+shape = SubResource("RectangleShape2D_alaj6")
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_left = -11.0
+offset_top = 622.0
+offset_right = 1158.0
+offset_bottom = 668.0
+color = Color(0.268533, 0.191203, 0.115566, 1)

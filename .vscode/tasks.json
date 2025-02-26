@@ -16,6 +16,12 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "Build Flappy Bird",
+			"type": "shell",
+			"command": "${workspaceFolder}/projects/flappy_bird_clone/build.bat",
+			"problemMatcher": []
+		},
+		{
 			"label": "Run Godot Game",
 			"type": "shell",
 			"command": "uv run c:/GithubRepos/Test/run-godot-game.py",

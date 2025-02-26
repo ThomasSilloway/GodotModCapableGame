@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4u1q8gxjkm5p"]
+
+[ext_resource type="Script" uid="uid://ulelbqjl4wy3" path="res://flappy_bird_clone/scripts/init_scene.gd" id="1_3k4yw"]
+
+[node name="FlappyBirdInit" type="Node"]
+script = ExtResource("1_3k4yw")

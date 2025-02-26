@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="ModdableTemplate-FlappyBirdClone"
+run/main_scene="uid://b3lgyil2g6x0l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
