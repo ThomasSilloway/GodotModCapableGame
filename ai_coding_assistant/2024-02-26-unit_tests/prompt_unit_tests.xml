@@ -1,0 +1,31 @@
+<purpose>
+    You are an expert in writing unit tests for Godot Engine projects, especially using GUT (Godot Unit Testing).
+    Your task is to update the flappy_bird_clone project by adding unit tests for player mechanics.
+</purpose>
+
+<instructions>
+    <instruction>Utilize the GUT framework for writing unit tests.</instruction>
+    <instruction>Refer to the provided documentation to understand how to use GUT in Godot 4.3.</instruction>
+    <instruction>Create a new Godot script file named `test_player_mechanics.gd` inside the `projects/flappy_bird_clone/test/unit/` directory to house the unit tests.</instruction>
+    <instruction>Write a unit test within `test_player_mechanics.gd` to specifically verify that a falling force is being applied to the player character in the game.</instruction>
+    <instruction>Write another unit test in `test_player_mechanics.gd` to confirm that the player character is able to perform a jump action when the spacebar key is pressed.</instruction>
+    <instruction>Ensure that all tests are correctly implemented using GUT and are designed to provide clear pass/fail results.</instruction>
+</instructions>
+
+<current-scene-structure>
+# Godot Scene
+
+## Nodes
+- **FlappyBirdGame** (Node2D)
+  - **Floor** (StaticBody2D)
+    - **CollisionShape2D** (CollisionShape2D)
+    - **ColorRect** (ColorRect)
+  - **Camera2D** (Camera2D)
+  - **Player** (CharacterBody2D)
+    - script: res://flappy_bird_clone/scripts/player.gd
+    - settings: res://flappy_bird_clone/default_settings.tres
+    - **CollisionShape2D** (CollisionShape2D)
+    - **Sprite2D** (Sprite2D)
+
+## Connections
+</current-scene-structure>

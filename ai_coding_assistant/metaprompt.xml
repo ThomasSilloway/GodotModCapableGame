@@ -273,12 +273,12 @@ Your contract summary and action points:
 </examples>
 
 <user-input>
-Purpose: Update an existing godot 4.3 project called flappy_bird_clone with some mechanics for the player
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with some unit tests for the player mechanics
 Instructions:
-	Use the folder projects/flappy_bird_clone
-	Create a script in the scripts folder called player.gd
-	Apply constant down force so player falls to the ground
-	Add spacebar input for player bounce in the style of flappy bird
+	Use GUT for unit testing, see attached documentation in the context
+	Create all tests in projects/flappy_bird_clone/test/unit/test_player_mechanics.gd
+	Create test to confirm that falling force is applied to player
+	Create test to confirm that player can jump when spacebar is pressed
 Sections: current_scene_structure
 Variables: current_scene_structure
 </user-input>
