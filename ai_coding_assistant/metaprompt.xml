@@ -273,13 +273,12 @@ Your contract summary and action points:
 </examples>
 
 <user-input>
-Purpose: Update a brand new godot 4.3 project with a mod template like the settings_menu project
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with some mechanics for the player
 Instructions:
-	Use the folder projects/flappybirdclone
-	Create a placeholder for the init_scene.tscn called init_scene_placeholder.txt in flappy_bird_clone\flappy_bird folder
-	Create a placeholder for the flappy_bird_game.tscn called flappy_bird_game_placeholder.txt in flappy_bird_clone\flappy_bird folder
-	Create a init_scene.gd in flappy_bird_clone\flappy_bird\scripts folder based off of the init_scene.gd file in the settings_menu project
-	Update init_scene.gd to inject into the main project settings the flappy_bird_game scene, see main_menu.gd file in main_menu project for context
-Sections: project_file_structure
-Variables: project_file_structure
+	Use the folder projects/flappy_bird_clone
+	Create a script in the scripts folder called player.gd
+	Apply constant down force so player falls to the ground
+	Add spacebar input for player bounce in the style of flappy bird
+Sections: current_scene_structure
+Variables: current_scene_structure
 </user-input>

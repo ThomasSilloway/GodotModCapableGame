@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3lgyil2g6x0l"]
+[gd_scene load_steps=6 format=3 uid="uid://b3lgyil2g6x0l"]
+
+[ext_resource type="Texture2D" uid="uid://dnilgkt1fc7m0" path="res://icon.svg" id="1_ewx64"]
+[ext_resource type="Script" uid="uid://ce6dlvcrs6tn1" path="res://flappy_bird_clone/scripts/player.gd" id="1_mhnqh"]
+[ext_resource type="Resource" uid="uid://rlirmoe5vaol" path="res://flappy_bird_clone/default_settings.tres" id="2_ife3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alaj6"]
 size = Vector2(1169, 44)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_465e8"]
+radius = 25.1794
 
 [node name="FlappyBirdGame" type="Node2D"]
 
@@ -20,3 +27,16 @@ color = Color(0.268533, 0.191203, 0.115566, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 323)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_mhnqh")
+settings = ExtResource("2_ife3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(271, 355)
+shape = SubResource("CircleShape2D_465e8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(272, 353)
+scale = Vector2(0.445313, 0.445313)
+texture = ExtResource("1_ewx64")

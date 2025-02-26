@@ -5,5 +5,7 @@ Instructions:
 	Create a placeholder for the flappy_bird_game.tscn called flappy_bird_game_placeholder.txt in flappy_bird_clone\flappy_bird folder
 	Create a init_scene.gd in flappy_bird_clone\flappy_bird\scripts folder based off of the init_scene.gd file in the settings_menu project
 	Update init_scene.gd to inject into the main project settings the flappy_bird_game scene, see main_menu.gd file in main_menu project for context
+	For the future: Have it add the build.bat 
+	Future: We had some naming convention issues - should have been in folder flappy_bird_clone\flappy_bird_clone 
 Sections: project_file_structure
 Variables: project_file_structure

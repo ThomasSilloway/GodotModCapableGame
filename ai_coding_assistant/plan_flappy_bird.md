@@ -10,12 +10,12 @@
 2. Scene Setup (Human)
    - [x ] Create empty 2D scene
    - [x ] Add brown horizontal rectangle for floor
-   - [ ] Add blue circle for player character (middle left of screen)
-     [ ] Fix bug: Resolution changes don't automatically adjust the camera, you can see off the play area
+   - [x ] Add blue circle for player character (middle left of screen)
+     [x ] Fix bug: Resolution changes don't automatically adjust the camera, you can see off the play area
 
 3. Player Mechanics (AI)
-   - [ ] Apply constant down force so player falls to the ground
-   - [ ] Add spacebar input for player bounce
+   - [x ] Apply constant down force so player falls to the ground
+   - [x ] Add spacebar input for player bounce
 
 4. Testing (AI)
    - [ ] Unit tests

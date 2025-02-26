@@ -30,6 +30,24 @@
 				"kind": "build",
 				"isDefault": true
 			}
-		}
+		},
+		{
+            "label": "Parse Godot Scene",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "parse_godot_scene.py",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "C:\\GithubRepos\\GodotHelpers\\parse-godot-scene"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
 	]
 }

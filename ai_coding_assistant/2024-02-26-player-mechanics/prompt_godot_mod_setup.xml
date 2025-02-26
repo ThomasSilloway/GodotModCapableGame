@@ -1,0 +1,27 @@
+<purpose>
+    You are an expert Godot 4.3 game engine developer.
+    You will update an existing Godot project to add player mechanics.
+</purpose>
+
+<instructions>
+    <instruction>Use the folder 'projects/flappy_bird_clone' to locate the existing Godot 4.3 project.</instruction>
+    <instruction>Create a new script named 'player.gd' inside the 'scripts' folder of the project.</instruction>
+    <instruction>Implement a constant downward force in the 'player.gd' script so that the player is always falling towards the ground.</instruction>
+    <instruction>Implement spacebar input detection in 'player.gd' to allow the player to bounce upwards, mimicking the Flappy Bird game mechanics.</instruction>
+</instructions>
+
+<current_scene_structure>
+# Godot Scene
+
+## Nodes
+- **FlappyBirdGame**
+  - **Floor**
+    - **CollisionShape2D**
+    - **ColorRect**
+  - **Camera2D**
+  - **Player**
+    - **CollisionShape2D**
+    - **Sprite2D**
+
+## Connections
+</current_scene_structure>

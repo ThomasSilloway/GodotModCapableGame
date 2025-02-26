@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="FlappyBirdSettings" load_steps=2 format=3 uid="uid://rlirmoe5vaol"]
+
+[ext_resource type="Script" path="res://flappy_bird_clone/scripts/flappy_bird_settings.gd" id="1_cbx8p"]
+
+[resource]
+script = ExtResource("1_cbx8p")
+gravity = 900.0
+jump_force = -300.0
