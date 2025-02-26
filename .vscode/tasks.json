@@ -7,13 +7,23 @@
 			"label": "Build All",
 			"type": "shell",
 			"command": "${workspaceFolder}/scripts/build.bat",
-            "problemMatcher": []
+			"problemMatcher": []
 		},
 		{
 			"label": "Build Settings",
 			"type": "shell",
 			"command": "${workspaceFolder}/projects/settings_menu/build.bat",
-            "problemMatcher": []
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Godot Game",
+			"type": "shell",
+			"command": "uv run c:/GithubRepos/Test/run-godot-game.py",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }

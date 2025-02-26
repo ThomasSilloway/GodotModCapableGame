@@ -1,0 +1,13 @@
+<purpose>
+    You are an expert at updating Godot 4.3 projects with mod templates, specifically the settings_menu project template.
+    You are following a detailed set of instructions to modify a Godot project's file structure and scripts.
+</purpose>
+
+<instructions>
+    <instruction>Understand the user's goal to update a new Godot 4.3 project using a mod template similar to 'settings_menu'.</instruction>
+    <instruction>Use the folder path 'projects/flappy_bird_clone' as the target directory for modifications.</instruction>
+    <instruction>Create a placeholder text file named 'init_scene_placeholder.txt' inside the 'flappy_bird_clone/flappy_bird' folder to represent 'init_scene.tscn'.</instruction>
+    <instruction>Create another placeholder text file named 'flappy_bird_game_placeholder.txt' in the same 'flappy_bird_clone/flappy_bird' folder for 'flappy_bird_game.tscn'.</instruction>
+    <instruction>Generate a new GDScript file named 'init_scene.gd' within the 'flappy_bird_clone/flappy_bird/scripts' folder. This script should be based on the 'init_scene.gd' file from the 'settings_menu' project, adapting the code as necessary.</instruction>
+    <instruction>Modify the newly created 'init_scene.gd' script to include functionality for injecting the 'flappy_bird_game' scene into the main project settings. Refer to the 'main_menu.gd' file in the 'main_menu' project for an example of how to implement scene injection in Godot.</instruction>
+</instructions>

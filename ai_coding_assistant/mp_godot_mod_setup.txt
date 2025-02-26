@@ -1,0 +1,9 @@
+Purpose: Update a brand new godot 4.3 project with a mod template like the settings_menu project
+Instructions:
+	Use the folder projects/flappybirdclone
+	Create a placeholder for the init_scene.tscn called init_scene_placeholder.txt in flappy_bird_clone\flappy_bird folder
+	Create a placeholder for the flappy_bird_game.tscn called flappy_bird_game_placeholder.txt in flappy_bird_clone\flappy_bird folder
+	Create a init_scene.gd in flappy_bird_clone\flappy_bird\scripts folder based off of the init_scene.gd file in the settings_menu project
+	Update init_scene.gd to inject into the main project settings the flappy_bird_game scene, see main_menu.gd file in main_menu project for context
+Sections: project_file_structure
+Variables: project_file_structure
