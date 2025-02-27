@@ -15,5 +15,12 @@ func _physics_process(delta: float) -> void:
     if Input.is_action_just_pressed("jump") or Input.is_key_pressed(KEY_SPACE):
         velocity.y = settings.jump_force
     
-    # Move the character
-    move_and_slide() 
+    # Move the character and check for collisions
+    var collision = move_and_collide(velocity * delta)
+    if collision:
+        # If we hit the floor, restart the game
+        if collision.get_collider() is StaticBody2D:
+            get_tree().reload_current_scene()
+    else:
+        # If no collision occurred, apply the regular movement
+        move_and_slide() 
