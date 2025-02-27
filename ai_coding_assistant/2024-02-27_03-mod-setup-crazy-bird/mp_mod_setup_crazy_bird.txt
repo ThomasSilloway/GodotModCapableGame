@@ -1,0 +1,13 @@
+Human Instructions - Create the godot project for the mod first
+
+Purpose: Update a brand new godot 4.3 project with a mod template like the settings_menu project called crazy_bird_mod
+Instructions:
+	Use the folder projects/crazy_bird_mod
+	Create a placeholder for the init_scene.tscn called init_scene_placeholder.txt in crazy_bird_mod\crazy_bird_mod folder
+	Create a init_scene.gd in crazy_bird_mod\crazy_bird_mod\scripts folder based off of the init_scene.gd file in the settings_menu project
+	Update init_scene.gd to only log that the mod is loaded and nothing else
+	Create a placeholder file in crazy_bird_mod\flappy_bird_clone\audio folder
+	Add a build.bat in crazy_bird_mod root folder that does the same functionality as the build.bat in the flappy_bird_clone project
+	Add a `export_presets.cfg` in crazy_bird_mod root folder similar to the flappy_bird_clone project
+
+	TODO Future- should add the batch file to the tasks.json

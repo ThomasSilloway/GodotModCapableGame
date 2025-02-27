@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjqlyvr2xmsig"]
+
+[ext_resource type="Script" uid="uid://bkfuc32qsoy23" path="res://crazy_bird_mod/scripts/init_scene.gd" id="1_rl0at"]
+
+[node name="InitScene" type="Node2D"]
+script = ExtResource("1_rl0at")

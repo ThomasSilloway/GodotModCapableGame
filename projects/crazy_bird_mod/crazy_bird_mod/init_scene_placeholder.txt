@@ -1,0 +1,4 @@
+This is a placeholder for init_scene.tscn that will be created in Godot.
+The scene should contain:
+- Root Node (Node) named "CrazyBirdInit"
+- Script attached: res://crazy_bird_mod/scripts/init_scene.gd 
