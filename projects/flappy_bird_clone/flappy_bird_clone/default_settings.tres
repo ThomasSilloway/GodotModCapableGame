@@ -7,3 +7,4 @@ script = ExtResource("1_cbx8p")
 gravity = 900.0
 jump_force = -300.0
 obstacle_speed = 200.0
+obstacle_reset_distance = 1700.0

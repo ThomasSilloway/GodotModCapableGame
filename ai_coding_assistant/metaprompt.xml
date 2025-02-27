@@ -273,19 +273,18 @@ Your contract summary and action points:
 </examples>
 
 <user-input>
-Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature script obstacles that the player can run into, write unit tests, and run the unit tests to verify the changes
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature: when obstacles go off the screen, move them off screen to the right, so they can be re-used
 Instructions:
-	Add a variable to flappy_bird_settings.gd and the .tres file called obstacle_speed
-	Add a script called obstacle.gd which moves the obstacles to the left at a constant speed, use the setting from previous step
-	Add a script called obstacle_half.gd to handle collision detection with the player.
-	Update obstacle_half.gd to reset the game when a collision is detected with the player
+	Add a variable to flappy_bird_settings.gd and the .tres file called obstacle_reset_distance
+	Update obstacle.gd to detect collision from either of its obstacle_half nodes with the ScreenEdgeCollider
+	When collision is detected, move the obstacle to the right by the obstacle_reset_distance
+
+	Update the appropriate .tscn files to add the scripts to the appropriate nodes
 	Use GUT for unit testing, see attached documentation in the context
-	Create all tests in projects/flappy_bird_clone/test/unit/test_obstacle_mechanics.gd
+	Create all tests in projects/flappy_bird_clone/test/unit/test_obstacle_reset.gd
 	Add await time of at least 3 frames after any player input in the tests
-	Create test to confirm that the obstacle moves to the left at the correct speed
-	Create test to confirm that the game is reset when a collision is detected with the player
+	Create tests to confirm the new feature works as expected
 	Double check that all of the instructions have been followed and implemented correctly
-	Verify the functionality by running the tests using run_tests.bat
 Sections: current_scene_structure
 Variables: current_scene_structure
 </user-input>

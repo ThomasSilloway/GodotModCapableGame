@@ -21,3 +21,6 @@ globs: *.gd, *.tscn, *.tres
 - documentation (relevant documentation for godot extensions)
 - projects (main game project and all mod projects)
 - scripts (any scripts used globally for all projects)
+
+## Implementation details
+- Ensure there's a newline at the end of each file

@@ -33,6 +33,8 @@
 # obstacle_full
 ## Nodes
 - **Obstacle** (Node2D)
+  - script: res://flappy_bird_clone/scripts/obstacle.gd
+  - settings: res://flappy_bird_clone/default_settings.tres
   - **ObstacleTop** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
   - **ObstacleBottom** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
   - **ScoringArea** (Area2D)
@@ -44,5 +46,6 @@
 # obstacle_half
 ## Nodes
 - **ObstacleHalf** (ColorRect)
+  - script: res://flappy_bird_clone/scripts/obstacle_half.gd
   - **Collider** (Area2D)
     - **CollisionShape2D** (CollisionShape2D)

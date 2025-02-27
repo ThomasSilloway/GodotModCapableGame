@@ -1,0 +1,71 @@
+<purpose>
+    You are a highly skilled Godot 4.3 game developer, expert in improving existing game projects.
+    You are tasked with updating the flappy_bird_clone project to add a new obstacle recycling feature.
+</purpose>
+
+<instructions>
+    <instruction>Add a new variable called obstacle_reset_distance to flappy_bird_settings.gd and its corresponding .tres file.</instruction>
+    <instruction>Modify obstacle.gd to include collision detection with ScreenEdgeCollider from either of its obstacle_half nodes.</instruction>
+    <instruction>Implement logic in obstacle.gd to move the obstacle to the right by obstacle_reset_distance when a collision with ScreenEdgeCollider is detected.</instruction>
+    <instruction>Update the relevant .tscn scene files to attach the modified obstacle.gd script and ensure the ScreenEdgeCollider is properly configured.</instruction>
+    <instruction>Utilize GUT for unit testing to verify the new obstacle reset feature, referring to the provided documentation for guidance.</instruction>
+    <instruction>Create a new unit test file named test_obstacle_reset.gd within the projects/flappy_bird_clone/test/unit/ directory.</instruction>
+    <instruction>Incorporate await time of at least 3 frames after any player input within the unit tests to ensure frame updates are accounted for.</instruction>
+    <instruction>Develop comprehensive unit tests in test_obstacle_reset.gd to thoroughly validate the correct functionality of the obstacle reset feature.</instruction>
+    <instruction>Conduct a final review to ensure all instructions have been accurately followed and implemented, and confirm the feature operates as expected.</instruction>
+</instructions>
+
+<current_scene_structure>
+# flappy_bird_game
+## Nodes
+- **FlappyBirdGame** (Node2D)
+  - **Floor** (StaticBody2D)
+    - **CollisionShape2D** (CollisionShape2D)
+    - **ColorRect** (ColorRect)
+  - **Camera2D** (Camera2D)
+  - **Player** (CharacterBody2D)
+    - script: res://flappy_bird_clone/scripts/player.gd
+    - settings: res://flappy_bird_clone/default_settings.tres
+    - **Sprite2D** (Sprite2D)
+    - **CollisionShape2D** (CollisionShape2D)
+  - **Obstacle** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle2** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle3** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle4** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle5** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle6** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **ScreenEdgeCollider** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+
+---
+
+# init_scene
+## Nodes
+- **FlappyBirdInit** (Node)
+  - script: res://flappy_bird_clone/scripts/init_scene.gd
+
+
+---
+
+# obstacle_full
+## Nodes
+- **Obstacle** (Node2D)
+  - script: res://flappy_bird_clone/scripts/obstacle.gd
+  - settings: res://flappy_bird_clone/default_settings.tres
+  - **ObstacleTop** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
+  - **ObstacleBottom** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
+  - **ScoringArea** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+
+---
+
+# obstacle_half
+## Nodes
+- **ObstacleHalf** (ColorRect)
+  - script: res://flappy_bird_clone/scripts/obstacle_half.gd
+  - **Collider** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+</current_scene_structure>
