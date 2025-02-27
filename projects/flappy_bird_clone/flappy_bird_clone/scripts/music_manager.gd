@@ -4,6 +4,9 @@ extends Node
 var music_player: AudioStreamPlayer
 
 func _ready() -> void:
+	# Make sure music keeps playing when game is paused
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	# Create audio player for background music
 	music_player = AudioStreamPlayer.new()
 	add_child(music_player)

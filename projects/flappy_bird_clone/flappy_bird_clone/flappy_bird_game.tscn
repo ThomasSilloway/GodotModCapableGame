@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3lgyil2g6x0l"]
+[gd_scene load_steps=13 format=3 uid="uid://b3lgyil2g6x0l"]
 
 [ext_resource type="Texture2D" uid="uid://dnilgkt1fc7m0" path="res://icon.svg" id="1_ewx64"]
 [ext_resource type="Script" uid="uid://ce6dlvcrs6tn1" path="res://flappy_bird_clone/scripts/player.gd" id="1_mhnqh"]
 [ext_resource type="Resource" uid="uid://rlirmoe5vaol" path="res://flappy_bird_clone/default_settings.tres" id="2_ife3q"]
 [ext_resource type="PackedScene" uid="uid://bc6k4ab6neul6" path="res://flappy_bird_clone/obstacle_full.tscn" id="4_eam3o"]
 [ext_resource type="Script" path="res://flappy_bird_clone/scripts/score_manager.gd" id="5_score"]
-[ext_resource type="Script" path="res://flappy_bird_clone/scripts/music_manager.gd" id="6_music"]
-[ext_resource type="Script" path="res://flappy_bird_clone/scripts/audio_manager.gd" id="7_audio"]
+[ext_resource type="Script" uid="uid://1wknlqmfmq5v" path="res://flappy_bird_clone/scripts/music_manager.gd" id="6_music"]
+[ext_resource type="Script" uid="uid://cafsjow87eedq" path="res://flappy_bird_clone/scripts/audio_manager.gd" id="7_audio"]
+[ext_resource type="Script" uid="uid://cvmgrdoevil2q" path="res://flappy_bird_clone/scripts/game_manager.gd" id="8_game"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alaj6"]
 size = Vector2(1169, 44)
@@ -112,6 +113,11 @@ script = ExtResource("5_score")
 
 [node name="MusicManager" type="Node" parent="."]
 script = ExtResource("6_music")
+music_volume_db = -9.48
 
 [node name="AudioManager" type="Node" parent="."]
 script = ExtResource("7_audio")
+jump_volume_db = -15.48
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("8_game")

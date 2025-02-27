@@ -7,6 +7,9 @@ var crash_sound: AudioStreamPlayer
 var jump_sound: AudioStreamPlayer
 
 func _ready() -> void:
+	# Make sure audio keeps playing when game is paused
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	# Set up crash sound
 	crash_sound = AudioStreamPlayer.new()
 	add_child(crash_sound)

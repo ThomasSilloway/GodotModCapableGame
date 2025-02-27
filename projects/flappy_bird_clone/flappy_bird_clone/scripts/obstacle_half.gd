@@ -10,9 +10,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_hit.emit()
-		# Play crash sound
-		var audio_manager = get_tree().get_root().get_node("FlappyBirdGame/AudioManager")
-		if audio_manager:
-			audio_manager.play_crash()
-		# Defer the scene reload to avoid physics callback issues
-		get_tree().call_deferred("reload_current_scene") 
+		# Get game manager and handle crash
+		var game_manager = get_tree().get_root().get_node("FlappyBirdGame/GameManager")
+		if game_manager:
+			game_manager.handle_crash() 
