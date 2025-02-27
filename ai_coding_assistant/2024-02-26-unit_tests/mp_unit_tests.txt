@@ -4,5 +4,6 @@ Instructions:
 	Create all tests in projects/flappy_bird_clone/test/unit/test_player_mechanics.gd
 	Create test to confirm that falling force is applied to player
 	Create test to confirm that player can jump when spacebar is pressed
+	Future update: It didn't leave await frames after the player input, so that caused the tests to fail
 Sections: current_scene_structure
 Variables: current_scene_structure
