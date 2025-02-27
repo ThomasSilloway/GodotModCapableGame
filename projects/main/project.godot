@@ -21,3 +21,7 @@ ConfigManager="*res://scripts/config_manager.gd"
 FileManager="*res://scripts/file_manager.gd"
 ModManager="*res://scripts/mod_manager.gd"
 SettingsManager="*res://scripts/settings_manager.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"

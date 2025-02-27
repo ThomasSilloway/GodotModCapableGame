@@ -3,6 +3,9 @@ extends Node
 func _ready() -> void:
 	print("Flappy Bird mod ready")
 	
+	# Register input mappings
+	_register_input_mappings()
+	
 	# If we're in the editor, we won't have a ConfigManager
 	if OS.has_feature("editor"):
 		register_game_scene()
@@ -15,6 +18,22 @@ func _ready() -> void:
 			print("Flappy Bird mod: Game scene registered successfully")
 		else:
 			printerr("Flappy Bird mod - could not find config manager")
+
+func _register_input_mappings() -> void:
+	if not InputMap.has_action("jump"):
+		InputMap.add_action("jump")
+		
+		# Add space key
+		var space_event = InputEventKey.new()
+		space_event.keycode = KEY_SPACE
+		InputMap.action_add_event("jump", space_event)
+		
+		# Add left mouse button
+		var mouse_event = InputEventMouseButton.new()
+		mouse_event.button_index = MOUSE_BUTTON_LEFT
+		InputMap.action_add_event("jump", mouse_event)
+		
+		print("Flappy Bird mod: Input mappings registered")
 
 func register_game_scene() -> void:
 	# This is called when running in the editor
