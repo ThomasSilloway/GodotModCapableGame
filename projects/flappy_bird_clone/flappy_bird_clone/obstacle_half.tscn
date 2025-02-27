@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dygaq4trkf6no"]
+[gd_scene load_steps=3 format=3 uid="uid://dygaq4trkf6no"]
+
+[ext_resource type="Script" uid="uid://ipb1r8mt0eyx" path="res://flappy_bird_clone/scripts/obstacle_half.gd" id="1_script"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xglxm"]
 size = Vector2(89, 852)
@@ -9,6 +11,7 @@ offset_top = -986.0
 offset_right = 53.0
 offset_bottom = -123.0
 color = Color(3.48948e-06, 0.564423, 0.194562, 1)
+script = ExtResource("1_script")
 
 [node name="Collider" type="Area2D" parent="."]
 visible = false

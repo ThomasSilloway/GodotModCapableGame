@@ -22,6 +22,17 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "Run Flappy Bird Tests",
+			"type": "shell",
+			"command": "${workspaceFolder}/projects/flappy_bird_clone/run_tests.bat",
+			"group": "test",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
 			"label": "Run Godot Game",
 			"type": "shell",
 			"command": "uv run c:/GithubRepos/Test/run-godot-game.py",
@@ -32,22 +43,22 @@
 			}
 		},
 		{
-            "label": "Parse Godot Scene",
-            "type": "shell",
-            "command": "uv",
-            "args": [
-                "run",
-                "parse_godot_scene.py",
-                "${file}"
-            ],
-            "options": {
-                "cwd": "C:\\GithubRepos\\GodotHelpers\\parse-godot-scene"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "problemMatcher": []
-        }
+			"label": "Parse Godot Scene",
+			"type": "shell",
+			"command": "uv",
+			"args": [
+				"run",
+				"parse-godot-scene/parse_godot_scene.py",
+				"${fileDirname}"
+			],
+			"options": {
+				"cwd": "C:\\GithubRepos\\GodotHelpers"
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		}
 	]
 }

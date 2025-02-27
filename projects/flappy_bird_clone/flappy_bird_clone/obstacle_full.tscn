@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc6k4ab6neul6"]
+[gd_scene load_steps=4 format=3 uid="uid://bc6k4ab6neul6"]
 
+[ext_resource type="Script" path="res://flappy_bird_clone/scripts/obstacle.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://dygaq4trkf6no" path="res://flappy_bird_clone/obstacle_half.tscn" id="1_dayli"]
+[ext_resource type="Resource" uid="uid://rlirmoe5vaol" path="res://flappy_bird_clone/default_settings.tres" id="2_settings"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggx3q"]
 size = Vector2(85, 948)
 
 [node name="Obstacle" type="Node2D"]
+script = ExtResource("1_script")
+settings = ExtResource("2_settings")
 
 [node name="ObstacleTop" parent="." instance=ExtResource("1_dayli")]
 offset_left = -40.0

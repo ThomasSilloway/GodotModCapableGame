@@ -1,0 +1,73 @@
+<purpose>
+    You are an expert Godot 4.3 engine developer.
+    Your goal is to update an existing Godot 4.3 project called flappy_bird_clone with a new feature.
+    You will add obstacles that the player can run into, write unit tests using GUT, and run the unit tests to verify the changes.
+    You follow instructions precisely and verify the implementation.
+</purpose>
+
+<instructions>
+    <instruction>Add a variable called `obstacle_speed` to `flappy_bird_settings.gd` and the corresponding `.tres` file.</instruction>
+    <instruction>Create a new script named `obstacle.gd`. This script should move obstacles to the left at a constant speed, using the `obstacle_speed` setting.</instruction>
+    <instruction>Create another script named `obstacle_half.gd`. This script will handle collision detection with the player.</instruction>
+    <instruction>Modify `obstacle_half.gd` to reset the game when a collision with the player is detected.</instruction>
+    <instruction>Update the appropriate .tscn files to add the scripts to the appropriate nodes</instruction>
+    <instruction>Use GUT for unit testing. Refer to the attached documentation for guidance.</instruction>
+    <instruction>Create a new test file at `projects/flappy_bird_clone/test/unit/test_obstacle_mechanics.gd` for all unit tests related to obstacle mechanics.</instruction>
+    <instruction>In your tests, include `await time` of at least 3 frames after any player input to ensure proper frame updates.</instruction>
+    <instruction>Write a unit test to verify that obstacles move to the left at the correct `obstacle_speed`.</instruction>
+    <instruction>Write a unit test to confirm that the game resets correctly when a player collision with an obstacle is detected.</instruction>
+    <instruction>Double-check that all instructions have been followed and implemented correctly.</instruction>
+    <instruction>Verify the functionality by running the tests using `run_tests.bat`. Ensure all tests pass.</instruction>
+</instructions>
+
+<current_scene_structure>
+# flappy_bird_game
+## Nodes
+- **FlappyBirdGame** (Node2D)
+  - **Floor** (StaticBody2D)
+    - **CollisionShape2D** (CollisionShape2D)
+    - **ColorRect** (ColorRect)
+  - **Camera2D** (Camera2D)
+  - **Player** (CharacterBody2D)
+    - script: res://flappy_bird_clone/scripts/player.gd
+    - settings: res://flappy_bird_clone/default_settings.tres
+    - **Sprite2D** (Sprite2D)
+    - **CollisionShape2D** (CollisionShape2D)
+  - **Obstacle** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle2** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle3** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle4** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle5** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle6** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **ScreenEdgeCollider** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+
+---
+
+# init_scene
+## Nodes
+- **FlappyBirdInit** (Node)
+  - script: res://flappy_bird_clone/scripts/init_scene.gd
+
+
+---
+
+# obstacle_full
+## Nodes
+- **Obstacle** (Node2D)
+  - **ObstacleTop** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
+  - **ObstacleBottom** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
+  - **ScoringArea** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+
+---
+
+# obstacle_half
+## Nodes
+- **ObstacleHalf** (ColorRect)
+  - **Collider** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+</current_scene_structure>

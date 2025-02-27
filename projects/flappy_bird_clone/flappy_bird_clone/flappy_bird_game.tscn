@@ -32,7 +32,7 @@ color = Color(0.268533, 0.191203, 0.115566, 1)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 323)
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
 script = ExtResource("1_mhnqh")
 settings = ExtResource("2_ife3q")
 

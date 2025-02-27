@@ -1,0 +1,16 @@
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature script obstacles that the player can run into, write unit tests, and run the unit tests to verify the changes
+Instructions:
+	Add a variable to flappy_bird_settings.gd and the .tres file called obstacle_speed
+	Add a script called obstacle.gd which moves the obstacles to the left at a constant speed, use the setting from previous step
+	Add a script called obstacle_half.gd to handle collision detection with the player.
+	Update obstacle_half.gd to reset the game when a collision is detected with the player
+	Update the appropriate .tscn files to add the scripts to the appropriate nodes
+	Use GUT for unit testing, see attached documentation in the context
+	Create all tests in projects/flappy_bird_clone/test/unit/test_obstacle_mechanics.gd
+	Add await time of at least 3 frames after any player input in the tests
+	Create test to confirm that the obstacle moves to the left at the correct speed
+	Create test to confirm that the game is reset when a collision is detected with the player
+	Double check that all of the instructions have been followed and implemented correctly
+	Verify the functionality by running the tests using run_tests.bat
+Sections: current_scene_structure
+Variables: current_scene_structure

@@ -19,21 +19,26 @@
 
 4. Testing (AI)
    - [x] Unit tests
-   - [ ] Verify testing loop - Have a batch file, test with cursor now that we have it being able to run commands
 
 5. Obstacle Creation (Human)
-   - [ ] Create obstacle scene:
+   - [x ] Create obstacle scene:
      - Two long rectangles (vertical, green)
      - Add collider in gap for score detection
      - Add colliders to rectangles
-   - [ ] Add 6 obstacle pairs to main scene with varied gap heights
-   - [ ] Create screen edge collider for pipe reset
+   - [x ] Add 6 obstacle pairs to main scene with varied gap heights
+   - [x ] Create screen edge collider for pipe reset
 
 6. Game Logic (AI)
-   - [ ] Create settings autoload script for game configuration (obstacle speed, etc.)
+   - [x ] Create settings autoload script for game configuration (obstacle speed, etc.)
    - [ ] Implement obstacle movement (constant left speed)
-   - [ ] Add obstacle reset when hitting screen edge
    - [ ] Implement collision detection and game reset
+   - [ ] Unit Tests
+   - [ ] Verification Loop with cursor
+   
+6a Game Logic - Obstacle reset
+   - [ ] Add obstacle reset when hitting screen edge
+   - [ ] Unit Tests
+   - [ ] Verification Loop with cursor
 
 7. Score System
    - [ ] Human: Add score UI element (horizontal box container)
