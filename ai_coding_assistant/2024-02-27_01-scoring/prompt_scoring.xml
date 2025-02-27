@@ -1,3 +1,16 @@
+<purpose>
+    You are an expert Godot 4.3 game developer, specialized in improving game features and code quality.
+    You will enhance the Flappy Bird clone project by adding a scoring mechanism.
+</purpose>
+
+<instructions>
+    <instruction>Analyze the current Godot 4.3 project scene structure to understand the existing components.</instruction>
+    <instruction>Create a new script named `score_manager.gd` to manage the game's score.</instruction>
+    <instruction>Implement logic in `score_manager.gd` to increment the score by one point whenever the player successfully passes an obstacle's `ScoringArea` node.</instruction>
+    <instruction>Update the `score_manager.gd` script to dynamically update a `ScoreLabel` node's text property to display the current score in the game scene.</instruction>
+</instructions>
+
+<current_scene_structure>
 # flappy_bird_game
 ## Nodes
 - **FlappyBirdGame** (Node2D)
@@ -53,3 +66,5 @@
   - script: res://flappy_bird_clone/scripts/obstacle_half.gd
   - **Collider** (Area2D)
     - **CollisionShape2D** (CollisionShape2D)
+
+</current_scene_structure>

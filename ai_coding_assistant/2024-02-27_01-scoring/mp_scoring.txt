@@ -1,0 +1,8 @@
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature: Add one point to the score for each obstacle that's passed
+Instructions:
+	# TODO: It added everything to this folder instead of the correct folder, so need to instruct it the correct folder 
+	ADD script score_manager.gd to store the current score
+	UPDATE script score_manager.gd to increase score by one when the player collides with ScoringArea node of an obstacle
+	UPDATE script score_manager.gd to set the ScoreLabel text to the current score
+Sections: current_scene_structure
+Variables: current_scene_structure

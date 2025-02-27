@@ -4,6 +4,9 @@ extends Node2D
 var _screen_edge_collider_detected := false
 
 func _ready() -> void:
+    # Add to obstacles group for score manager to find
+    add_to_group("obstacles")
+    
     # Load default settings if none provided
     if not settings:
         settings = load("res://flappy_bird_clone/default_settings.tres")
@@ -23,4 +26,4 @@ func _on_area_entered(area: Area2D) -> void:
 func _reset_position() -> void:
     # Move the obstacle to the right by obstacle_reset_distance
     position.x += settings.obstacle_reset_distance
-    _screen_edge_collider_detected = false 
+    _screen_edge_collider_detected = false
