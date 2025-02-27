@@ -4,6 +4,8 @@ Instructions:
 	Update obstacle.gd to detect collision from either of its obstacle_half nodes with the ScreenEdgeCollider
 	When collision is detected, move the obstacle to the right by the obstacle_reset_distance
 
+	TODO Future Update: These guidelines are too vague, it needs more direction to not make poorly designed tests
+	
 	Update the appropriate .tscn files to add the scripts to the appropriate nodes
 	Use GUT for unit testing, see attached documentation in the context
 	Create all tests in projects/flappy_bird_clone/test/unit/test_obstacle_reset.gd
