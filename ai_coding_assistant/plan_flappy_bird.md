@@ -18,9 +18,8 @@
    - [x ] Add spacebar input for player bounce
 
 4. Testing (AI)
-   - [ ] Unit tests
-   - [ ] Integration tests
-   - [ ] Verify testing loop
+   - [x] Unit tests
+   - [ ] Verify testing loop - Have a batch file, test with cursor now that we have it being able to run commands
 
 5. Obstacle Creation (Human)
    - [ ] Create obstacle scene:

@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3lgyil2g6x0l"]
+[gd_scene load_steps=8 format=3 uid="uid://b3lgyil2g6x0l"]
 
 [ext_resource type="Texture2D" uid="uid://dnilgkt1fc7m0" path="res://icon.svg" id="1_ewx64"]
 [ext_resource type="Script" uid="uid://ce6dlvcrs6tn1" path="res://flappy_bird_clone/scripts/player.gd" id="1_mhnqh"]
 [ext_resource type="Resource" uid="uid://rlirmoe5vaol" path="res://flappy_bird_clone/default_settings.tres" id="2_ife3q"]
+[ext_resource type="PackedScene" uid="uid://bc6k4ab6neul6" path="res://flappy_bird_clone/obstacle_full.tscn" id="4_eam3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alaj6"]
 size = Vector2(1169, 44)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_465e8"]
-radius = 25.1794
+radius = 25.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eam3o"]
+size = Vector2(249, 790)
 
 [node name="FlappyBirdGame" type="Node2D"]
 
@@ -32,11 +36,35 @@ position = Vector2(576, 323)
 script = ExtResource("1_mhnqh")
 settings = ExtResource("2_ife3q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(271, 355)
-shape = SubResource("CircleShape2D_465e8")
-
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(272, 353)
+position = Vector2(272, 355)
 scale = Vector2(0.445313, 0.445313)
 texture = ExtResource("1_ewx64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(272, 355)
+shape = SubResource("CircleShape2D_465e8")
+
+[node name="Obstacle" parent="." instance=ExtResource("4_eam3o")]
+position = Vector2(853, 350)
+
+[node name="Obstacle2" parent="." instance=ExtResource("4_eam3o")]
+position = Vector2(1143, 476)
+
+[node name="Obstacle3" parent="." instance=ExtResource("4_eam3o")]
+position = Vector2(1419, 278)
+
+[node name="Obstacle4" parent="." instance=ExtResource("4_eam3o")]
+position = Vector2(1709, 448)
+
+[node name="Obstacle5" parent="." instance=ExtResource("4_eam3o")]
+position = Vector2(1993, 184)
+
+[node name="Obstacle6" parent="." instance=ExtResource("4_eam3o")]
+position = Vector2(2270, 448)
+
+[node name="ScreenEdgeCollider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenEdgeCollider"]
+position = Vector2(-145.5, 328)
+shape = SubResource("RectangleShape2D_eam3o")

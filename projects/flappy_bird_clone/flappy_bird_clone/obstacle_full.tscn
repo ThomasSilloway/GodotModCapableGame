@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc6k4ab6neul6"]
+
+[ext_resource type="PackedScene" uid="uid://dygaq4trkf6no" path="res://flappy_bird_clone/obstacle_half.tscn" id="1_dayli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggx3q"]
+size = Vector2(85, 948)
+
+[node name="Obstacle" type="Node2D"]
+
+[node name="ObstacleTop" parent="." instance=ExtResource("1_dayli")]
+offset_left = -40.0
+offset_top = -985.0
+offset_right = 60.0
+offset_bottom = -122.0
+
+[node name="ObstacleBottom" parent="." instance=ExtResource("1_dayli")]
+offset_left = -40.0
+offset_top = 111.67
+offset_right = 60.0
+offset_bottom = 974.67
+
+[node name="ScoringArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea"]
+position = Vector2(165, 6)
+shape = SubResource("RectangleShape2D_ggx3q")
