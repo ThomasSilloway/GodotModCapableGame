@@ -10,6 +10,22 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "Build Main",
+			"type": "shell",
+			"command": "${workspaceFolder}/projects/main/build.bat",
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Latest",
+			"type": "shell",
+			"command": "${workspaceFolder}/scripts/run.bat",
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			}
+		},
+		{
 			"label": "Build Settings",
 			"type": "shell",
 			"command": "${workspaceFolder}/projects/settings_menu/build.bat",
