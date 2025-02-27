@@ -273,11 +273,17 @@ Your contract summary and action points:
 </examples>
 
 <user-input>
-Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature: Add one point to the score for each obstacle that's passed
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature: Hook up audio and music to the game
 Instructions:
-	ADD script score_manager.gd to store the current score
-	UPDATE script score_manager.gd to increase score by one when the player collides with ScoringArea node of an obstacle
-	UPDATE script score_manager.gd to set the ScoreLabel text to the current score
+	NOTE: Only edit files in the projects\flappy_bird_clone\flappy_bird_clone folder
+	ADD script music_manager.gd to play the background music: background_music.mp3
+	UPDATE music_manager.gd to allow for adjusting volume of the music in the editor
+	UPDATE music to be played in the `Music` audio bus
+	ADD script audio_manager.gd to handle playing the sound effects
+	UPDATE audio_manager.gd to allow for adjusting the volume of the sound effects in the editor
+	UPDATE sound effects to be played in the `SFX` audio bus
+	HOOK UP `crash.wav` to the event when the player collides with an obstacle and floor
+	HOOK UP `jump_up.wav` to every time the player presses spacebar to move up
 Sections: current_scene_structure
 Variables: current_scene_structure
 </user-input>

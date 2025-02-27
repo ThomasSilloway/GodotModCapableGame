@@ -19,12 +19,13 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 - `mainmenu` is the first mod that displays the main menu for the project.
 - `settings_menu` is the mod that injects a settings button into the main menu which opens a settings menu
  - The settings menu updates the values in the `SettingsManager` in the `main` project automatically by having its own placeholder `SettingsManager` autoloaded which is not exported with the project. Surprisingly having a file in the auto load that is not included in the exported project doesn't break anything.
+- `flappy_bird_clone` is the mod that contains the flappy bird clone game
 
 ## Usage - Manual
 
 - Export `main` project as an .exe (Turning on Export Console Wrapper is handy for testing)
   - Export folder: build
-- Export `main_menu`, `settings_menu` projects as a .zip and put it into the 
+- Export `main_menu`, `settings_menu`, `flappy_bird_clone` projects as a .zip and put it into the 
   - Export folder: build/mods
 
 - Run the `main` executable and view the logs to see the main menu is loaded (first commit)
@@ -32,6 +33,13 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
 ## Usage - Automated
 - Update `scripts/build.bat` to match your paths
 - Run the build batch file to automatically create versioned builds
+
+## Credits
+
+### Audio
+- Music and sound effects from:
+  - [Pixabay.com](https://pixabay.com)
+  - [Zapsplat.com](https://www.zapsplat.com)
 
 ## Future Updates
 

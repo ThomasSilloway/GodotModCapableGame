@@ -1,0 +1,88 @@
+<purpose>
+  You are a highly skilled Godot Engine 4.3 developer, expert in enhancing game projects with audio and music features.
+  Your mission is to update the 'flappy_bird_clone' project according to the user's detailed specifications.
+</purpose>
+
+<instructions>
+  <instruction>Carefully review the user-task-description for updating the Godot project 'flappy_bird_clone'.</instruction>
+  <instruction>Implement the audio and music features as described in the user-task-description, focusing on creating `music_manager.gd` and `audio_manager.gd` scripts.</instruction>
+  <instruction>Ensure volume adjustability for both music and sound effects within the Godot editor.</instruction>
+  <instruction>Route music to the 'Music' audio bus and sound effects to the 'SFX' audio bus.</instruction>
+  <instruction>Hook up 'crash.wav' to collision events and 'jump_up.wav' to spacebar presses as instructed.</instruction>
+  <instruction>Restrict file modifications to the 'projects\flappy_bird_clone\flappy_bird_clone' folder exclusively.</instruction>
+</instructions>
+
+<user-input>
+Purpose: Update an existing godot 4.3 project called flappy_bird_clone with a feature: Hook up audio and music to the game
+Instructions:
+	NOTE: Only edit files in the projects\flappy_bird_clone\flappy_bird_clone folder
+	ADD script music_manager.gd to play the background music: background_music.mp3
+	UPDATE music_manager.gd to allow for adjusting volume of the music in the editor
+	UPDATE music to be played in the `Music` audio bus
+	ADD script audio_manager.gd to handle playing the sound effects
+	UPDATE audio_manager.gd to allow for adjusting the volume of the sound effects in the editor
+	UPDATE sound effects to be played in the `SFX` audio bus
+	HOOK UP `crash.wav` to the event when the player collides with an obstacle and floor
+	HOOK UP `jump_up.wav` to every time the player presses spacebar to move up
+Sections: current_scene_structure
+Variables: current_scene_structure
+</user-input>
+
+<current_scene_structure>
+# flappy_bird_game
+## Nodes
+- **FlappyBirdGame** (Node2D)
+  - **Floor** (StaticBody2D)
+    - **CollisionShape2D** (CollisionShape2D)
+    - **ColorRect** (ColorRect)
+  - **Camera2D** (Camera2D)
+  - **Player** (CharacterBody2D)
+    - script: res://flappy_bird_clone/scripts/player.gd
+    - settings: res://flappy_bird_clone/default_settings.tres
+    - **Sprite2D** (Sprite2D)
+    - **CollisionShape2D** (CollisionShape2D)
+  - **Obstacle** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle2** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle3** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle4** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle5** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **Obstacle6** (res://flappy_bird_clone/obstacle_full.tscn, instanced scene)
+  - **ScreenEdgeCollider** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+  - **HUD** (Control)
+    - **ScoreBackground** (ColorRect)
+- **ScoreLabel** (Label)
+  - text: "9999"
+
+
+---
+
+# init_scene
+## Nodes
+- **FlappyBirdInit** (Node)
+  - script: res://flappy_bird_clone/scripts/init_scene.gd
+
+
+---
+
+# obstacle_full
+## Nodes
+- **Obstacle** (Node2D)
+  - script: res://flappy_bird_clone/scripts/obstacle.gd
+  - settings: res://flappy_bird_clone/default_settings.tres
+  - **ObstacleTop** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
+  - **ObstacleBottom** (res://flappy_bird_clone/obstacle_half.tscn, instanced scene)
+  - **ScoringArea** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+
+---
+
+# obstacle_half
+## Nodes
+- **ObstacleHalf** (ColorRect)
+  - script: res://flappy_bird_clone/scripts/obstacle_half.gd
+  - **Collider** (Area2D)
+    - **CollisionShape2D** (CollisionShape2D)
+
+</current_scene_structure>
