@@ -34,8 +34,7 @@ set export_path_mod=mods\
 set mod_filetype=.zip
 set mod_name_00=main_menu
 set mod_name_01=settings_menu
-set mod_name_02=flappy_bird_clone
-set mod_name_03=crazy_bird_mod
+set mod_name_02=isometric_2d_prototype
 
 :: Create directories
 mkdir "%export_path%"
@@ -49,7 +48,6 @@ copy "%scripts_path%mod_order_template.yaml" "%export_path%%export_path_mod%mod_
 %godot_path% --headless --path %project_path%%mod_name_00% --export-pack "Windows Desktop" %export_path%%export_path_mod%%mod_name_00%%mod_filetype%
 %godot_path% --headless --path %project_path%%mod_name_01% --export-pack "Windows Desktop" %export_path%%export_path_mod%%mod_name_01%%mod_filetype%
 %godot_path% --headless --path %project_path%%mod_name_02% --export-pack "Windows Desktop" %export_path%%export_path_mod%%mod_name_02%%mod_filetype%
-%godot_path% --headless --path %project_path%%mod_name_03% --export-pack "Windows Desktop" %export_path%%export_path_mod%%mod_name_03%%mod_filetype%
 :: Check if the main executable was created successfully
 if exist "%export_path%%run_path_file%" (
 	echo Build successful. Running the game...
