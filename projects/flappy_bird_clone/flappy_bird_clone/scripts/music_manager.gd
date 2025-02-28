@@ -14,6 +14,7 @@ func _ready() -> void:
 	# Load and set up background music
 	var music = load("res://flappy_bird_clone/audio/background_music.mp3")
 	music_player.stream = music
+	music_player.stream.loop = true  # Enable looping
 	music_player.bus = "Music"
 	music_player.volume_db = music_volume_db
 	

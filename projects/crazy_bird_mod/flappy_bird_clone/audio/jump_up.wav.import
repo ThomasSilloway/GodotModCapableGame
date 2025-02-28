@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://co676snuw1dy8"
-path="res://.godot/imported/jump_up.wav-6090a2f4f41e8774f70a044b731ed834.sample"
+path="res://.godot/imported/jump_up.wav-1edab5364c4bf2e5034459c70c7a382b.sample"
 
 [deps]
 
-source_file="res://flappy_bird_mod/audio/jump_up.wav"
-dest_files=["res://.godot/imported/jump_up.wav-6090a2f4f41e8774f70a044b731ed834.sample"]
+source_file="res://flappy_bird_clone/audio/jump_up.wav"
+dest_files=["res://.godot/imported/jump_up.wav-1edab5364c4bf2e5034459c70c7a382b.sample"]
 
 [params]
 
