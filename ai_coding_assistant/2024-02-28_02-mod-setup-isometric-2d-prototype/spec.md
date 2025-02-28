@@ -26,6 +26,7 @@ Run `scripts/build.bat` and confirm:
 
 1. Create basic project template
 ```
+TODO: Need to tell it to make a placeholder game scene like `flappy_bird_game.tscn`
  - Create an init_scene.tscn in isometric_2d_prototype\isometric_2d_prototype folder based off the one in the `flappy_bird_clone` project
  - Create a init_scene.gd in scripts folder based off of the init_scene.gd file in the `flappy_bird_clone` project
 ```
@@ -33,7 +34,9 @@ Run `scripts/build.bat` and confirm:
 2. Create tools
 ```
 - Add a build.bat in isometric_2d_prototype root folder that does the same functionality as the build.bat in the flappy_bird_clone project
+TODO Next time - build.bat was broken, need to tell it to literally copy the other one and just update the name
 - Add a `export_presets.cfg` in isometric_2d_prototype root folder similar to the flappy_bird_clone project
+TODO: Export presets were wrong - it should be an exact copy
 - Add a `Build Isometric 2D Prototype` task to `tasks.json` to run the new `build.bat` from step 3
 ```
 
