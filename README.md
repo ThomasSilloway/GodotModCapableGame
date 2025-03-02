@@ -16,7 +16,7 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
  - Complete working example of a modular game built entirely with mods
  - Demonstrates two different modding approaches:
    1. Injection: The Settings mod shows how to inject new UI elements into existing scenes (adds a settings button to main menu)
-   2. Overwriting: The Crazy Bird mod demonstrates how to override existing game files to modify gameplay (changes assets and behavior of the Flappy Bird clone)
+   2. Overwriting: The Crazy Bird mod demonstrates how to override existing game files to modify gameplay (changes audio assets of the Flappy Bird clone)
  - Includes a functional Flappy Bird clone as the base game
  - Features a clean mod loading system with automatic mod discovery
  - Shows how to handle mod dependencies and load order
