@@ -20,6 +20,8 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
  - Includes a functional Flappy Bird clone as the base game
  - Features a clean mod loading system with automatic mod discovery
  - Shows how to handle mod dependencies and load order
+### Known Bugs
+ - Pressing spacebar causes multiple jumps at once. Left mouse click works properly
 
 ## Tech Details
 
