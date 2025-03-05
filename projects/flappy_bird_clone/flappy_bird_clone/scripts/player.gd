@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	velocity.y += settings.gravity * delta
 	
 	# Handle jump input
-	if Input.is_action_just_pressed("jump") or Input.is_key_pressed(KEY_SPACE):
+	if Input.is_action_just_pressed("jump"):
 		velocity.y = settings.jump_force
 		# Play jump sound
 		if audio_manager:

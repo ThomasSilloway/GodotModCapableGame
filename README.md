@@ -21,7 +21,9 @@ Build the game as a bunch of mods to make sure mod support works the entire way 
  - Features a clean mod loading system with automatic mod discovery
  - Shows how to handle mod dependencies and load order
 ### Known Bugs
- - Pressing spacebar causes multiple jumps at once. Left mouse click works properly
+ - Fullscreen setting may be bugged on some monitors
+ - GUT unit tests are included, but the add-on is not included in the project
+ - Futura font is referenced but not added to the repo
 
 ## Tech Details
 
